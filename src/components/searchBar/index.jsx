@@ -39,9 +39,17 @@ export default function SearchBar() {
         let products = FinData.products;
 
         if(products.length > 0){
-             results = products.filter(entry =>{
-                return entry.name.toLowerCase().includes(searchKey);
-            });
+            //  results = products.filter(entry =>{
+            //     return entry.name.toLowerCase().includes(searchKey);
+            // });
+
+             results = products.filter(function(product){
+                 if (this.count < 10 && product.name.toLowerCase().includes(searchKey)) {
+                     this.count++;
+                     return true;
+                 }
+                 return false;
+             }, {count: 0})
         }
         setSearchResults(results);
     }
