@@ -39,10 +39,6 @@ export default function SearchBar() {
         let products = FinData.products;
 
         if(products.length > 0){
-            //  results = products.filter(entry =>{
-            //     return entry.name.toLowerCase().includes(searchKey);
-            // });
-
              results = products.filter(function(product){
                  if (this.count < 10 && product.name.toLowerCase().includes(searchKey)) {
                      this.count++;
@@ -94,7 +90,7 @@ return(
                                     searchResults.map((result) => {
                                   return <Product productType={result.type} productName={result.name} productUrl={result.url}/>
                                 }):
-                                    <Typography sx={{ p: 2 }}>No related data for the search terms</Typography>
+                                    <Typography variant="caption" sx={{ p: 2 }}>No related data for the search terms</Typography>
                             }
                         </Paper>
                     </Fade>
