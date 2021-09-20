@@ -1,0 +1,17 @@
+.logoSettings{
+    width: 400px;
+}
+
+.searchBarContainer{
+    width:80%
+}
+
+.searchResultsSettings{
+    width: 80%;
+}
+
+@media(max-width: 600px){
+    .logoSettings {
+        width: 250px !important;
+    }
+}

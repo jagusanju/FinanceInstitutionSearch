@@ -1,0 +1,9 @@
+
+.productRowSettings{
+    font-size: small;
+}
+.productRowSettings:hover {
+    background-color: #61dafb;
+    color:#ffff;
+    font-weight: 600;
+}
