@@ -10,6 +10,11 @@ export default function Product(props){
 
     const {productType, productName, productUrl} = props;
 
+    /**
+     * Method to set the icon based on the product type
+     * @param productType
+     * @returns {JSX.Element}
+     */
     const resultIcon = (productType) =>{
         if (productType === 'BANK') {
             return <AccountBalanceIcon fontSize="small"/>;

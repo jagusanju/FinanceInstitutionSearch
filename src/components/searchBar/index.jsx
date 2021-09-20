@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import Paper from '@mui/material/Paper';
 import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
@@ -21,6 +21,11 @@ export default function SearchBar() {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState(null);
 
+    /**
+     * Method to filter out the data based on search terms
+     * @param newPlacement
+     * @returns {function(*): void}
+     */
     const searchQueryChangeHandler = (newPlacement) => (event) => {
         event.preventDefault();
         let searchKey = event.target.value.toLowerCase().trim();
@@ -50,6 +55,9 @@ export default function SearchBar() {
         setSearchResults(results);
     }
 
+    /**
+     * Helping method to close the popper if clicked outside
+     */
     const handleClickAway = () => {
         setOpen(false);
     };
