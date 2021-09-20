@@ -85,7 +85,7 @@ return(
                 value={searchQuery}
                 onChange={searchQueryChangeHandler('bottom-start')}
             />
-            <IconButton type="submit" sx={{ p: '10px' }} aria-label="search">
+            <IconButton sx={{ p: '10px' }} aria-label="search">
                 <SearchIcon />
             </IconButton>
 
