@@ -4,7 +4,7 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/MonetizationOn';
 import SearchIcon from '@mui/icons-material/Search';
-import PageviewIcon from '@mui/icons-material/Pageview';
+import PageViewIcon from '@mui/icons-material/Pageview';
 import Popper from '@mui/material/Popper';
 import Fade from '@mui/material/Fade';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -66,7 +66,7 @@ export default function SearchBar() {
 return(
     <div className={styles.searchBarContainer}>
         <IconButton sx={{ p: '10px' }} aria-label="PageView" className={styles.logoSettings}>
-            <PageviewIcon fontSize="large" color={"primary"}/>Financial Institution Search
+            <PageViewIcon fontSize="large" color={"primary"}/>Financial Institution Search
         </IconButton>
         <ClickAwayListener
             mouseEvent="onMouseDown"
