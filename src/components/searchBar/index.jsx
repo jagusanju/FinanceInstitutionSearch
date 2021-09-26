@@ -4,14 +4,14 @@ import InputBase from '@mui/material/InputBase';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/MonetizationOn';
 import SearchIcon from '@mui/icons-material/Search';
-import CompanyLogo from '../../assets/images/pclogo.png';
+import PageviewIcon from '@mui/icons-material/Pageview';
 import Popper from '@mui/material/Popper';
 import Fade from '@mui/material/Fade';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Product from '../../components/searchResults/product'
 import FinData from '../../assets/data/products.json';
 import Typography from '@mui/material/Typography';
-import './index.css'
+import styles from './index.module.css'
 
 
 export default function SearchBar() {
@@ -64,8 +64,10 @@ export default function SearchBar() {
 
 
 return(
-    <div className="searchBarContainer">
-        <img src={CompanyLogo} className="logoSettings"/>
+    <div className={styles.searchBarContainer}>
+        <IconButton sx={{ p: '10px' }} aria-label="PageView" className={styles.logoSettings}>
+            <PageviewIcon fontSize="large" color={"primary"}/>Financial Institution Search
+        </IconButton>
         <ClickAwayListener
             mouseEvent="onMouseDown"
             touchEvent="onTouchStart"
@@ -76,7 +78,7 @@ return(
             elevation={3}
         >
             <IconButton sx={{ p: '10px' }} aria-label="menu">
-                <MenuIcon color="secondary"/>
+                <MenuIcon color="primary"/>
             </IconButton>
             <InputBase
                 sx={{ ml: 1, flex: 1 }}
@@ -89,7 +91,7 @@ return(
                 <SearchIcon />
             </IconButton>
 
-            <Popper className='searchResultsSettings' open={open} anchorEl={anchorEl} placement={placement} transition>
+            <Popper className={styles.searchResultsSettings} open={open} anchorEl={anchorEl} placement={placement} transition>
                 {({ TransitionProps }) => (
                     <Fade {...TransitionProps} timeout={350}>
                         <Paper elevation={3}>

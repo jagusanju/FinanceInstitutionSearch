@@ -4,7 +4,7 @@ import MenuIcon from "@mui/icons-material/MonetizationOn";
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import CreditCardIcon from '@mui/icons-material/CreditCard';
 import LocalAtmIcon from '@mui/icons-material/LocalAtm';
-import './product.css';
+import styles from './product.module.css';
 
 export default function Product(props){
 
@@ -28,7 +28,7 @@ export default function Product(props){
     }
 
 return(
-    <div className='productRowSettings'>
+    <div className={styles.productRowSettings}>
         <IconButton sx={{ p: '10px' }} aria-label="menu">
             {resultIcon(productType)}
         </IconButton>
